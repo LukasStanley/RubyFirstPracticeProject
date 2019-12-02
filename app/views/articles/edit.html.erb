@@ -1,0 +1,15 @@
+<h1>Edit an existing Article!!!</h1>
+<%= form_for @article, url:article_path do |f| %>
+    <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+    </p>
+    <p>
+    <%= f.label :text %>
+    <%= f.text_area :text %>
+    </p>
+    <p>
+    <%= f.submit %>
+    </p>
+    </p>
+    <% end %>
