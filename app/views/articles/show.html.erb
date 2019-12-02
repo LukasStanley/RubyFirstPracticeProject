@@ -24,6 +24,16 @@
     <%= comment.body %>
     </p>
 
+    <p>
+
+    <%= link_to 'Delete Comment', [comment.article, comment],
+        method: :Delete,
+        data: {confirm: 'Ahhh The comment who lived... Come to die?'}
+
+    %>
+    
+    </p>
+
     <% end %>
 
 <hr>
