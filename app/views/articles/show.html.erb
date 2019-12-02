@@ -2,7 +2,7 @@
     <strong>Title:</strong>
     <%= @article.title %>
 </p>
-
+<p><%= @article.created_at %></p>
 <p>
     <strong>
     Text:
@@ -11,57 +11,12 @@
 </p>
 
 <hr>
-<h2>comments</h2>
-    <% @article.comments.each do |comment| %>
-    <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-    </p>
 
-
-    <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-    </p>
-
-    <p>
-
-    <%= link_to 'Delete Comment', [comment.article, comment],
-        method: :Delete,
-        data: {confirm: 'Ahhh The comment who lived... Come to die?'}
-
-    %>
-    
-    </p>
-
-    <% end %>
+<%= render 'comments/comment' %>
 
 <hr>
 
-<h2> Add Comment </h2>
-<%= form_for([@article, @article.comments.build]) do |f| %>
-
-<p>
-
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
-
-</p>
-
-<p>
-
-    <%= f.label :body %><br>
-    <%= f.text_area :body %><br>
-
-</p>
-
-<p>
-
-    <%= f.submit %><br>
-
-</p>
-
-<% end %>
+<%= render 'comments/form' %>
 
 <p>
 

@@ -1,4 +1,6 @@
 class ArticlesController < ApplicationController
+http_basic_authenticate_with name: "dr zombie", password: "grimba",
+except: [:index, :show]
 
     def index
 
