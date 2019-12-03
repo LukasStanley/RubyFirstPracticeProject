@@ -1,6 +1,10 @@
+<div class="row" style="padding-top:10%;">
+<div class="col"></div>
+<div class="col=md-7">
 <h1>Create a New Article!!!</h1>
 <%= form_for :article, url:articles_path do |f| %>
-<!-- Checking for Errors -->
+    <div class="field" style="100%">
+    <!-- Checking for Errors -->
     <% if @article.errors.any? %>
         <div id="Errors_explanation">
         <h2>
@@ -14,27 +18,30 @@
                 <%= msg %>
             </li>
             <% end %>
-        </ul>
-        
+        </ul>      
+        </p>
+        </div>
     <% end %>
-    </div>
-    </p>
-
+        
     <p>
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
     </p>
     <p>
-    <%= f.label :text %>
-    <%= f.text_area :text %>
+    <%= f.label :text %><br>
+    <%= f.text_area :text, class: 'form-control' %>
     </p>
     <p>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-lg btn-success"%>
     </p>
     </p>
+    </div>
     <% end %>
 <p>
-    <%= link_to("Back to post list", articles_path) %>
-    |
-    <%= link_to("Back to home page", welcome_index_path) %>
+    <%= link_to("Back to post list", articles_path, class: 'btn btn-md btn-info') %>
+    <%= link_to("Back to home page", welcome_index_path, class: 'btn btn-md btn-primary') %>
 </p>
+
+</p></div><!-- .col-md-10 closing-->
+<div class ="col"></div>
+</div>
