@@ -1,12 +1,10 @@
 <h2>comments</h2>
     <% @article.comments.each do |comment| %>
     <p>
+    <small><small><p><%= comment.created_at.strftime("%a %-b %-d, %Y | %l:%M %p") %></p></small></small>
     <strong>Commenter:</strong>
     <%= comment.commenter %>
     </p>
-
-    <p><%= comment.created_at %></p>
-
     <p>
     <strong>Comment:</strong>
     <%= comment.body %>

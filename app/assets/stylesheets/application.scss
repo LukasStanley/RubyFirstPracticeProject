@@ -12,19 +12,68 @@
  *
  */
  @import "bootstrap";
+ @import "welcome";
+ @import "navigation";
+ @import "footer";
 
- .container
- {padding-top: 15px;}
+body {
+    min-height: 50rem;
+    padding-top: 4.5rem;
+    background-color: chartreuse;
+    overflow-x: hidden;
+}
+  
+
+.container
+{padding-top: 15px;}
 
 thead
 {
 
-    background-color: #3bd946;
+    background-color: cornflowerblue;
+    color: papayawhip;
 
 }
 
  .form-control
  {
      background-color: #efeeef;
-     border: 2px solid #ff0000;
+     border: 3px solid #ff0000;
  }
+
+ 
+.btn-light
+{
+
+    background-color: #efeeef;
+    border: 3px solid #ff0000;
+
+}
+
+.jumbotron
+{
+
+    background-color: cornflowerblue;
+
+}
+
+.white
+{
+
+    color:#ffffff
+
+}
+
+.linktxt
+{
+
+    color: aqua;
+
+}
+
+.linktxt:hover
+{
+
+    color:aquamarine
+
+}

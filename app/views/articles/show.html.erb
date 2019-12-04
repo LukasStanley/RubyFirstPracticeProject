@@ -1,15 +1,11 @@
 <div class="row">
-<div class="col"></div>
 <div class="col=md-7">
+
+<%= image_tag "Test Header 2.jpg", style:"width:100%" %>
 <p>
-    <strong>Title:</strong>
-    <%= @article.title %>
-</p>
-<p><%= @article.created_at %></p>
+    <h2><strong><%= @article.title %></strong></h2>
+<small><small><%= @article.created_at.strftime("%a %-b %-d, %Y | %l:%M %p") %></small></small></p>
 <p>
-    <strong>
-    Text:
-    </strong>
     <%= @article.text %>
 </p>
 
@@ -27,5 +23,4 @@
     <%= link_to "Home", welcome_index_path, class:'btn btn-md btn-primary' %>
 
 </p></div><!-- .col-md-10 closing-->
-<div class ="col"></div>
 </div>
