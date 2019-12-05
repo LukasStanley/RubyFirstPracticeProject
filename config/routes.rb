@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get 'welcome/index'
   resources :articles do 
     resources :comments
+    collection do
+      get :search #creates a new path for the search bar.
+    end
   end
 
   root 'welcome#index'

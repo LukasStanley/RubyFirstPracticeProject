@@ -12,11 +12,19 @@
 
 }
 
+
 .nav-item
 {
 
     font-weight: bold;
     color: blanchedalmond;
+
+}
+
+.active_nav-link
+{
+
+    color: burlywood !important;
 
 }
 
@@ -31,6 +39,6 @@
 .navbar-toggler
 {
 
-    border: 2px solid #ffffff
+    border: 2px solid #ffffff;
 
 }
