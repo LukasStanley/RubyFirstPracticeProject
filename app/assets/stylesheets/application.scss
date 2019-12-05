@@ -41,6 +41,30 @@ thead
      border: 3px solid #ff0000;
  }
 
+ .form-control2 select
+{
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    padding-left: 0.3rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #8b8b8b;
+    background-clip: padding-box;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    background-color: #efeeef;
+    border: 3px solid #ff0000;
+  }
+
+.sm_style
+{
+
+    font-size: 12px;
+    margin-bottom: 3px;;
+
+}
  
 .btn-light
 {
@@ -75,5 +99,50 @@ thead
 {
 
     color:aquamarine
+
+}
+
+.show_notice
+{
+
+    margin:auto;
+    width:300px;
+    color:goldenrod;
+    font-size: 18px;
+    padding: 15px;
+    background-color: gold;
+    text-align: center;
+
+}
+
+.show_alert
+{
+
+    margin:auto;
+    width:300px;
+    color:rgb(255, 0, 230);
+    font-size: 18px;
+    padding: 15px;
+    background-color: rgb(255, 173, 210);
+    text-align: center;
+
+}
+
+@media (max-width: 576px)
+{
+
+    .show_notice
+    {
+
+        width: 100%;
+
+    }
+
+    .show_alert
+    {
+
+        width: 100%;
+
+    }
 
 }
