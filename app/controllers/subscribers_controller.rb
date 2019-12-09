@@ -1,7 +1,6 @@
 class SubscribersController < ApplicationController
 
-    http_basic_authenticate_with name: "dr zombie", password: "grimba",
-    except: [:create]
+    before_action :admin_authorize, :except => [:create]
 
     def index 
 

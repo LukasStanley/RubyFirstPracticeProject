@@ -1,0 +1,15 @@
+<div class="row" style="padding-top:0%;">
+<div class="col"></div>
+<div class="col=md-4">
+<h1>Please Sign In</h1>
+
+<%= form_tag sessions_path do %>
+<%= text_field_tag :userid, nil, placeholder: 'User ID', class: 'form-control mr-sm-2 sm_style' %> <div>
+<%= password_field_tag :password, nil, placeholder: 'Password', class: 'form-control mr-sm-2 sm_style' %> <div>
+<%= submit_tag 'Sign In', class: "btn btn-light my-2 my-sm-0" %> <div>
+<% end %>
+<%= link_to("Back to post list", articles_path, class: 'btn btn-md btn-info') %>
+<%= link_to("Back to home page", welcome_index_path, class: 'btn btn-md btn-primary') %>
+</div><!-- .col-md-10 closing-->
+<div class ="col"></div>
+</div>

@@ -6,14 +6,29 @@
   <div class="collapse navbar-collapse" id="navbarCollapse">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <%= active_link_to "Home", "welcome", 'index', welcome_index_path, "active_nav-link" %>
+        <%= active_link_to "Home", "welcome", 'index', welcome_index_path, "active_nav-link", "inactive_nav-link" %>
       </li>
       <li class="nav-item">
-        <%= active_link_to "Balog", "articles", 'index', articles_path, "active_nav-link" %>
+        <%= active_link_to "Balog", "articles", 'index', articles_path, "active_nav-link", "inactive_nav-link" %>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">About</a>
       </li>
+      
+        <% if current_user %>
+          <li class="nav-item">
+            <%= link_to 'Sign Out', session_path('active'), method: :delete, class: "active_nav-link" %>
+          </li>
+          <li class="nav-item">
+          HI, <%= current_user.userid %>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to 'Create Account', new_user_path, class: "active_nav-link" %>
+            <%= link_to 'Sign In', new_session_path, class: "active_nav-link"  %>
+          </li>
+        <% end %>
+      
     </ul>
     <div class="form-inline mt-2 mt-md-0">
     <%= form_tag search_articles_path, method: :get do %>

@@ -1,0 +1,43 @@
+<div class="row" style="padding-top:0%;">
+<div class="col"></div>
+<div class="col=md-4">
+<h1>Create an Account (please :((( ) !!!</h1>
+
+<%= form_for @user do |f| %>
+<div class="field" style="100%">
+<!-- Checking for Errors -->
+<% if @user.errors.any? %>
+<div id="Errors_explanation">
+    <h2>
+        <%= pluralize(@user.errors.count, "error") %>
+        prohibited this user from being saved:
+    </h2>
+    <p>
+    <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+        <li>
+            <%= msg %>
+        </li>
+        <% end %>
+    </ul>      
+    </p>
+</div>
+<% end %> <!-- end of error checking -->
+
+<%= f.text_field :userid, placeholder: 'Input a User ID', class: 'form-control mr-sm-2 sm_style' %>
+<%= f.email_field :email, placeholder: 'Input your email', class: 'form-control mr-sm-2 sm_style' %>
+<%= f.password_field :password, placeholder: 'Input your desired password', class: 'form-control mr-sm-2 sm_style' %>
+<%= f.password_field :password_confirmation, placeholder: 'Confirm desired password', class: 'form-control mr-sm-2 sm_style' %>
+<%= f.submit 'Create Account' %>
+<% end %>
+</div>
+
+
+<p>
+    <%= link_to("Back to post list", articles_path, class: 'btn btn-md btn-info') %>
+    <%= link_to("Back to home page", welcome_index_path, class: 'btn btn-md btn-primary') %>
+</p>
+
+</p></div><!-- .col-md-10 closing-->
+<div class ="col"></div>
+</div>
