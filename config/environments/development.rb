@@ -27,6 +27,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # For paperclip to know where to look for imagemagick
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 

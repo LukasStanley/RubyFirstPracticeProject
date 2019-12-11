@@ -78,7 +78,7 @@ before_action :admin_authorize, :except => [:index, :show, :search]
     private 
 
     def article_params
-        params.require(:article).permit(:title, :text)
+        params.require(:article).permit(:title, :text, :photo, :music, :movie)
     end
 
 

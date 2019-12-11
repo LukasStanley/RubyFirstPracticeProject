@@ -2,7 +2,7 @@
 <div class="col"></div>
 <div class="col=md-7">
 <h1>Edit an existing Article!!!</h1>
-<%= form_for @article, url:article_path do |f| %>
+<%= form_for @article, url:article_path, html: {multipart: true} do |f| %>
     <div class="field" style="100%">
     <!-- Checking for Errors -->
     <% if @article.errors.any? %>
@@ -33,6 +33,18 @@
     </p>
     <p>
     <%= f.submit class: "btn btn-lg btn-success"%>
+    </p>
+    <p>
+        <%= f.label :photo %><br>
+        <%= f.file_field :photo, class:'form-control mr-sm-2 sm_style' %>
+    </p>
+        <p>
+        <%= f.label :music %><br>
+        <%= f.file_field :music, class:'form-control mr-sm-2 sm_style' %>
+    </p>
+        <p>
+        <%= f.label :movie %><br>
+        <%= f.file_field :movie, class:'form-control mr-sm-2 sm_style' %>
     </p>
     </p>
     </div>

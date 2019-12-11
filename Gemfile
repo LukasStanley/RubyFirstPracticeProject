@@ -15,6 +15,11 @@ gem 'bootstrap', '~> 4.3', '>= 4.3.1'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 
+#For file upload
+gem 'paperclip', '~> 6.1'
+gem 'paperclip-av-transcoder', '~> 0.6.4'
+gem 'aws-sdk-s3', '~> 1.59'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
